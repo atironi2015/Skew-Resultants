@@ -200,7 +200,7 @@ end function;
 
 
 // DD function
-// INPUT: a matrix M
+// INPUT: a matrix M with entries only in the Quaternion algebra (Block 3)
 // OUTPUT: if the Dieudinné determinant is zero or not
 
 DD:=function(M)
