@@ -1,5 +1,4 @@
 
-
 // Write in Magma only one of the following three blocks of Magma instructions before 
 // to use any function of this library, depending on which division ring you want to work
 
