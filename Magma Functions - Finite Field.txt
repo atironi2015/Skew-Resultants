@@ -1,7 +1,8 @@
 
-// A field with four elements
+// Changing GF(4) with GF(q) for any q prime power, one gets any finite field F<w>:=GF(q)
 
 F<w>:=GF(4); 
+
 R<x>:=PolynomialRing(F);
 S:= map< F -> F | x :-> x^2 >;
 D:= map< F -> F | x :-> w*(S(x)+x) >;
