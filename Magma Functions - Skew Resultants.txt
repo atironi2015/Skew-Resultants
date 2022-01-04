@@ -1,7 +1,7 @@
 
-// A field with eight elements
+// A field with four elements
 
-F<w>:=GF(8); 
+F<w>:=GF(4); 
 R<x>:=PolynomialRing(F);
 S:= map< F -> F | x :-> x^2 >;
 D:= map< F -> F | x :-> w*(S(x)+x) >;
