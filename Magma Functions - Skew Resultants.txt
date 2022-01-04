@@ -1,5 +1,5 @@
 
-// A field with four elements
+// This library is an example for a field with four elements
 
 F<w>:=GF(4); 
 R<x>:=PolynomialRing(F);
