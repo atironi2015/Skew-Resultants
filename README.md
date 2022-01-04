@@ -1,5 +1,3 @@
 # Skew-Resultants
 
-Read the first part of "Magma Functions - Skew Resultants.txt" before to use any function of the library.
-
-Once loaded the library, the default division ring is the Quaternion algebra. 
+Load one of the files "Magma Functions - ... .txt" to use the main functions of the paper with the corresponding division ring. 
