@@ -1,31 +1,10 @@
 
-// Write in Magma only one of the following three blocks of Magma instructions before 
-// to use any function of this library, depending on which division ring you want to work
+// A field with eight elements
 
-
-// Block 1 - A field with four elements
-
-F<w>:=GF(4); 
+F<w>:=GF(8); 
 R<x>:=PolynomialRing(F);
 S:= map< F -> F | x :-> x^2 >;
 D:= map< F -> F | x :-> w*(S(x)+x) >;
-
-
-// Block 2 - The complex field
-
-F<i>:=ComplexField();
-R<x>:=PolynomialRing(F);
-S:= map< F -> F | x :-> ComplexConjugate(x) >;
-D:= map< F -> F | x :-> x-ComplexConjugate(x) >;
-
-
-// Block 3 - Quaternion algebra
-
-F<i,j,k> := QuaternionAlgebra< RealField() | -1, -1 >;
-R<x>:=PolynomialRing(F);
-S:= map< F -> F | x :-> i*x*(1/i) >;
-D:= map< F -> F | x :-> 0 >;
-
 
 
 //
@@ -196,26 +175,6 @@ j:=j+1; i:=0; k:=0;
 until i ge m;
 until j eq n;
 return MM;
-end function;
-
-
-// DD function
-// INPUT: a matrix M with entries only in the Quaternion algebra (Block 3)
-// OUTPUT: if the Dieudinné determinant is zero or not
-
-DD:=function(M)
-MM:=MT(M);
-A:=1;
-n:=NumberOfRows(M);
- for N in [1..n] do
-  A:=A*MM[N,N];
- end for;
- if A*Conjugate(A) eq F!1 or A*Conjugate(A) eq F!0 then
-  print"Ddet is";
-  return 0;
- end if;
-print"Ddet is NOT";
-return 0;
 end function;
 
 
