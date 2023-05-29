@@ -1,11 +1,10 @@
 
-// Quaternion algebra
+// Complex Field
 
-F<i,j,k> := QuaternionAlgebra< RealField() | -1, -1 >;
-R<x>:=PolynomialRing(F);
-S:= map< F -> F | x :-> i*x*(1/i) >;
-D:= map< F -> F | x :-> 0 >;
-
+F<i>:=ComplexField(); 
+R<x>:=PolynomialRing(F); 
+S:= map< F -> F | x :-> ComplexConjugate(x) >; 
+D:= map< F -> F | x :-> x-ComplexConjugate(x) >; 
 
 //
 // MAGMA FUNCTIONS for skew resultants:
